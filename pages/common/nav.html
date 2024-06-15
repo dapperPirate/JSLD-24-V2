@@ -1,0 +1,35 @@
+<nav class="navbar">
+
+    <div class="navbar__container">
+
+        <button class="mobile__nav__toggle" expanded="false"></button>
+
+        <ul class="navbar__menu" data-visible="false">
+            <li class="navbar__item"> <a href="../pages/portfolio.html" class="navbar__links" id="portfolio-page">Portfolio</a> </li>
+            <li class="navbar__item"> <a href="../pages/about.html" class="navbar__links" id="about-page">About</a> </li>
+            <!-- <li class="navbar__item"> <a href="../pages/contact.html" class="navbar__links" id="contact-page">Contact</a> </li> -->
+        </ul>
+
+        <a href="../index.html" class="navbar__title"> <img src="../assets/logos/icon.png" alt=""> </a>
+
+    </div>
+</nav>
+
+
+
+<script>
+const nav = document.querySelector('.navbar__menu');
+const navToggle = document.querySelector('.mobile__nav__toggle');
+
+navToggle.addEventListener('click', () => {
+    const visibility = nav.getAttribute('data-visible')
+
+    if (visibility === "false") {
+        nav.setAttribute("data-visible", true)
+        navToggle.setAttribute("expanded", true)
+    } else {
+        nav.setAttribute("data-visible", false)
+        navToggle.setAttribute("expanded", false)
+    }
+})
+</script>
