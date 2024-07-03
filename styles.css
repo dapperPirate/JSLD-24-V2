@@ -2,7 +2,6 @@
 
     --blue: #063853;
 
-    /* --highlightColor: rgba(22, 22, 22, 0.8); */
     --highlightColor: #063853b8;
 
     --headingColor: white;
@@ -12,18 +11,16 @@
     --headingSize: 4rem;
     --subheadingSize: 2rem;
     --paragraphSize: 2rem;
-
-    --headingFont: "Space Grotesk";
-    --subheadingFont: "Poppins";
-    --paragraphFont: "Poppins";
-
-
-    --secondaryTextColor: #0b567f;
-    --thirdTextColor: #14638e;
+    
+    --headingFont: "Sorts Mill Goudy";
+    --subheadingFont: "Sorts Mill Goudy";
+    --paragraphFont: "Sorts Mill Goudy";
 
     --translucentBG: rgba(19, 19, 19, 0.8);
 
 }
+
+html {background-color: black}
 
 * {
     box-sizing: border-box;
@@ -31,6 +28,8 @@
     padding: 0;
     scroll-behavior: smooth;
     text-decoration: none;
+
+
 }
 
 body {
@@ -41,7 +40,46 @@ body {
 }
 
 
+/* make keyframes that tell the start state and the end state of our object */
+@-webkit-keyframes blurIn { from { filter: blur(0.5rem); } to { filter: blur(0); } }
+@-moz-keyframes blurIn { from { filter: blur(0.5rem); } to { filter: blur(0); } }
+@keyframes blurIn { from { filter: blur(0.5rem); } to { filter: blur(0); } }
 
+.blur-in {
+   filter: blur(0.5rem);  /* make things invisible upon start */
+  -webkit-animation:blurIn ease-in 1;  /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+  -moz-animation:blurIn ease-in 1;
+  animation:blurIn ease-in 1;
+
+  -webkit-animation-fill-mode:forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+  -moz-animation-fill-mode:forwards;
+  animation-fill-mode:forwards;
+
+  -webkit-animation-duration:1s;
+  -moz-animation-duration:1s;
+  animation-duration:1s;
+}
+
+
+/* make keyframes that tell the start state and the end state of our object */
+@-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+
+.fade-in {
+  opacity:0;  /* make things invisible upon start */
+  -webkit-animation:fadeIn ease-in 1;  /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+  -moz-animation:fadeIn ease-in 1;
+  animation:fadeIn ease-in 1;
+
+  -webkit-animation-fill-mode:forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+  -moz-animation-fill-mode:forwards;
+  animation-fill-mode:forwards;
+
+  -webkit-animation-duration:1s;
+  -moz-animation-duration:1s;
+  animation-duration:1s;
+}
 
 .navbar {
     background: var(--blue);
@@ -60,10 +98,11 @@ body {
     z-index: 1;
     width: 100%;
     margin: 0 auto;
+
 }
 
 
-.navbar__title {
+/* .navbar__title {
     display: flex;
     list-style: none;
 
@@ -91,17 +130,21 @@ body {
 
 .navbar__title img:hover {
     filter: brightness(125%);
-}
+} */
 
 
 
 
-.navbar__menu{
+.navbar__menu {
     display: flex;
     align-items: center;
     list-style: none;
 
-    grid-column: 1;
+    grid-column: 2;
+
+
+    margin: 0 auto;
+
 
 }
 
@@ -109,20 +152,23 @@ body {
 .navbar__links{
     font-family: var(--headingFont);
     font-weight: bold;
+    font-size: 2rem;
+
+    text-decoration: underline;
+    text-decoration-thickness: 3px;
+    text-decoration-color: burlywood;
+
     color: var(--headingColor);
-    display: flex;
-    align-items: center;
-    justify-self: center;
-    width: auto;
-    height: auto;
+
     padding-left: 0.6vw; /*gives extra click room*/
     padding-right: 0.6vw;
-    margin-left: 0.6vw;/*space between elements*/
-    margin-right: 0.6vw;
-    text-decoration: none;
+
+    margin-left: 1vw;/*space between elements*/
+    margin-right: 1vw;
+
     transition: all 0.1s ease;
-    font-size: 2rem;
-    background-color: rgba(23, 44, 69, 0);
+
+
     border-radius: 0px;
 }
 
@@ -164,67 +210,90 @@ body {
 
 
 
+
+
 .hero {
-    height: 800px;
+    height: 95vh;
 
     display: grid;
 
-    grid-template-columns: repeat(4, 25%);
-    grid-template-rows: repeat(4, 25%);
+    grid-template-columns: repeat(5, 20%);
+    grid-template-rows: repeat(5, 20%);
 
-    overflow-y: hidden;
-
+    overflow: hidden;
 
     background-color:rgb(0, 0, 0);
 
-    /* 
-    background-image: url("assets/work/cats/theatre\ cat.jpg");
 
+
+    background-image: url("assets/test.jpg");
     background-repeat: no-repeat;
-    background-position-x: center; */
+    /* background-blend-mode:lighten; */
+    background-position-x: center;
+    /* background-position-y: -500px; */
+    background-size: cover;
+
+
 
 }
 
-.hero img {
+/* .hero img {
+
     width: 100%;
 
+    grid-column: 1 / span 5;
 
-    object-fit: cover;
+    -webkit-animation-delay: 0s;
+    -moz-animation-delay: 0s;
+    animation-delay: 0;
 
-    grid-column: span 4;
-
-    z-index: 1;
-}
+} */
 
 .name__container {
     margin: 4rem;
 
-    grid-column: span 2;
-    grid-row: 3;
+    grid-column: 2 / span 3;
+    grid-row: 2;
 
     z-index: 2;
+
+    text-align: center;
+
+
+    -webkit-animation-delay: 1s;
+    -moz-animation-delay: 1s;
+    animation-delay: 1s;
+
+
 }
 
 .name__container h1 {
+
     font-family: var(--headingFont);
-    font-weight: bold;
-    font-size: var(--headingSize);
+    font-size: 5rem;
 
     color: var(--headingColor);
+
+    text-shadow: 2px 2px orange;
+
 }
 
 .name__container h2 {
-    font-family: var(--subheadingFont);
+
+    font-family: "Sorts Mill Goudy";
     font-weight: lighter;
-    font-size: var(--subheadingSize);
+    font-style: italic;
+
+    font-size: 2.5rem;
 
     color: orange;
+
 }
 
 .description {
     margin: 4rem;
 
-    grid-column: span 2;
+    grid-column: 3 / span 2;
 
     grid-row: 3;
 
@@ -236,22 +305,67 @@ body {
     font-weight: 300;
     font-size: var(--paragraphSize);
     
-    color: var(--headingColor);
+    color: bisque;
 
 }
 
+.show__details {
+    display: flex;
+
+    margin: auto;
+
+    grid-column: 1 / span 2;
+    grid-row: 4;
+
+    width: 500px;
+    height: 50px;
+
+    -webkit-animation-delay: 2s;
+    -moz-animation-delay: 2s;
+    animation-delay: 2s;
+}
+
+.show__details h3 {
+    font-family: var(--headingFont);
+
+    padding: 30px;
+    color:rgb(131, 107, 75);
+}
+
+.hero a {
+
+    border: none;
+    background-color: transparent;
+
+    font-family: var(--headingFont);
+    font-size: 4rem;
+    text-decoration: underline;
+    text-decoration-thickness: 4px;
+    text-decoration-color: #0b567f;
+
+    margin: 0 auto;
+
+    width: 300px;
+    height: 92px;
+
+    color: burlywood;
+
+    grid-column: 3;
+    grid-row: 5;
+
+    z-index: 100;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
 
 
+    -webkit-animation-delay: 4s;
+    -moz-animation-delay: 4s;
+    animation-delay: 4s;
 
-
-
-
-
-
-
-
-
-
+}
 
 
 
@@ -273,6 +387,9 @@ body {
     background-repeat: no-repeat;
     /* background-blend-mode:lighten; */
     background-position-x: center;
+    text-align: center;
+
+
 }
 
 .recent__work__container h1 {
@@ -280,7 +397,7 @@ body {
     font-size: var(--headingSize);
     text-decoration: underline;
 
-    color: var(--secondaryTextColor);
+    color: burlywood;
 }
 
 
@@ -290,10 +407,36 @@ body {
     display: flex;
     flex-direction: row;
     gap: 2rem;
+
 }
 
 
 
+.recent__work__container #portfolio__button {
+/* 
+    border: bisque;
+    border-style: double;
+    border-width: 6px;
+
+    background-color: var(--thirdTextColor); */
+    color: bisque;
+
+    font-family: var(--headingFont);
+    font-size: 2rem;
+    
+    text-decoration: underline;
+    text-decoration-thickness: 3px;
+    text-decoration-color: var(--secondaryTextColor);
+
+
+    grid-column: 3;
+    grid-row: 5;
+
+    z-index: 100;
+
+    padding: 5px;
+
+}
 
 
 
@@ -322,6 +465,8 @@ body {
     margin: 0 auto;
 
     text-align: center;
+
+    text-transform: uppercase;
 
 }
 
@@ -367,6 +512,9 @@ body {
     height: inherit;
 
     padding: 10px 20px;
+
+    text-transform: uppercase;
+
 }
 
 .credits__container img {
@@ -438,10 +586,13 @@ body {
 
     background-color: var(--translucentBG);
 
-    font-family: "Space Grotesk";
+    font-family: var(--headingFont);
     color: whitesmoke;
 
     padding: 25px 0;
+
+    text-transform: uppercase;
+
 }
 
 .full__credits__container h1 {
@@ -451,7 +602,7 @@ body {
 
 .full__credits__container p {
     margin: 0 auto;
-    width: 70%;
+    width: 90%;
 
     font-size: x-large;
 
@@ -516,6 +667,11 @@ body {
 
 
 .about__page__container {
+
+
+    font-family: var(--headingFont);
+
+
     display: flex;
 
     margin: 0 auto;
@@ -526,35 +682,42 @@ body {
 
     min-height: 1000px;
 
-    padding-top: 2rem;
+    padding: 2rem 0;
 }
 
 .work__history {
     width: 50%;
     padding: 0 25px;
-
 }
 
 .work__history h1,h2,h3{
     color: var(--headingColor);
-    font-family: "Space Grotesk";
-
 }
 
 .work__history h1{
-    font-size: xx-large;
+    font-size: 2.5rem;
     padding: 15px 0;
+
+
+    text-decoration-color: burlywood;
+    text-decoration-line: underline;
+    text-decoration-thickness: 4px;
 }
 
 .work__history h2{
-    font-size: x-large;
-    padding-top: 20px;
+    font-size: 3rem;
+    padding-top: 25px;
 
+
+    text-decoration-color: burlywood;
+    text-decoration-line: underline;
+    text-decoration-thickness: 3px;
 }
 
 .work__history h3{
-    font-family: "Poppins";
-    font-weight: 400;   
+    font-size: xx-large;
+    font-weight: 200;
+
 
 }
 
@@ -568,26 +731,28 @@ body {
 }
 
 .about__jack__description h2 {
-    font-size: 3rem;
+    font-size: 6rem;
+
+    text-shadow: 2px 2px orange;
 
 
 }
 
 .about__jack__description h3 {
-    font-family: var(--subheadingFont);
     font-weight: lighter;
+    font-style: italic;
 
-    font-size: x-large;
+    font-size: xx-large;
     color: orange;
+
 
 }
 
 
 .about__jack__description p {
     margin-top: 2rem;
-    font-size: large;
+    font-size: xx-large;
 
-    font-family: "Poppins";
     color: whitesmoke;
 
     text-align: left;
@@ -628,10 +793,13 @@ body {
 
     padding: 1rem;
 
-    min-height: 1000px;
+    min-height: min-content;
 
 
     background-color: var(--translucentBG);
+
+
+    padding-bottom: 20vh;
 
 }
 
@@ -673,7 +841,6 @@ body {
 
 .footer__container p {
     font-family: var(--subheadingFont);
-    font-weight: 200;
     font-size: 1rem;
     
     color: var(--headingColor);
@@ -692,9 +859,9 @@ body {
 
 .project__thumbnail {
     width: 500px;
-    height: 620px;
+    height: 630px;
 
-    background-color: rgb(217, 217, 217);
+    background-color: rgb(17, 49, 84);
 
     text-align: center;
 
@@ -719,8 +886,6 @@ body {
     font-family: var(--headingFont);
     font-size: 3rem;
 
-    color: var(--thirdTextColor);
-
     text-decoration: none;
 
 }
@@ -728,9 +893,9 @@ body {
 .project__thumbnail h2 {
 
     font-family: var(--headingFont);
-    font-size: 2rem;
+    font-size: 2.4rem;
 
-    color: var(--secondaryTextColor);
+    color: bisque;
 
     text-decoration: none;
 
@@ -743,49 +908,18 @@ body {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-/* @media screen and (max-width: 1300px) { 
-
-
-    /* PORTFOLIO
-
-    .production__images__container {
-        grid-template-columns: repeat(3, 33%);
-
-        gap: 0.5rem;
-        margin: 0.5rem;
-
-    }
-
-}
- */
-
-
 @media screen and (max-width: 1600px) { 
 
     /* Project Thumbnails */
 
     .project__thumbnail {
-        width: 400px;
-        height: 500px;
+        width: 350px;
+        height: 460px;
     }
 
 
     .project__thumbnail img {
-        width: 400px;
-        aspect-ratio: 1 / 1;
-        object-fit: cover;
+        width: 350px;
     }
 
     .project__thumbnail h1 {
@@ -800,58 +934,222 @@ body {
 
 }
 
-
 @media screen and (max-width: 1300px) { 
 
     /* Project Thumbnails */
 
     .project__thumbnail {
-        width: 300px;
-        height: 500px;
+        width: 330px;
+        height: 430px;
     }
 
 
     .project__thumbnail img {
-        width: 300px;
+        width: 330px;
     }
 
 
 }
-
 
 @media screen and (max-width: 1024px) { 
 
 
     /* Home Page  */
     .hero {
-        height: 670px;
+
+        height: 600px;
+
+        grid-template-columns: repeat(5, 20%);
+        grid-template-rows: repeat(4, 20%);
+
+
+        background-position-y: 100px;
+
+
     }
 
-    .name__container {
-        margin: 0.5em;
 
-        grid-column: span 2;
-        grid-row: 2;
+    .name__container {
+        grid-column: 1 / span 5;
+
     }
 
 
     .name__container h1 {
-        font-size: xx-large;
+        text-shadow: 1px 1px orange;
+        font-size: 4rem;
     }
     
     .name__container h2 {
         font-size: x-large ;
 
     }
-    
 
-    .description {
-        margin: 0;
-        grid-column: 3 / span 2;
-        grid-row: 2 / span 2;
+    .show__details {
+
+        font-size: xx-small;
+
+
+        grid-column: 1 / span 2;
+        grid-row: 4;
+
+    }
+
+    .hero a {
+        display: none;
+    }
+
+    .recent__work__container h1 {
+        font-size: xx-large;
     }
 
 
+
+    .work__holders {
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /* PORTFOLIO */
+
+    .portfolio__work__holder {
+        width: 100%;
+    }
+
+    .title__container h1 {
+        font-size: xx-large;
+
+    }
+
+    .title__container h2 {
+        font-size: large;
+        width: 90%;
+
+    }
+
+
+
+    .centre__container {
+        display: flex;
+        flex-direction: column;
+    }
+
+
+    .production__credits__holder {
+        justify-content: center;
+
+        display: grid;
+        grid-template-columns: repeat(2, 50%);
+    }
+
+    .production__credit__container {
+        text-align: center;
+        padding: 10px 0;
+    
+    }
+
+    .credits__container {
+        width: 100%;
+
+    }
+
+    .credits__container img {
+        width: 150px;
+    }
+
+    .credits__container h1 {
+        font-size:medium;
+    }
+    
+    .credits__container h3 {
+        font-size: medium;
+    }
+
+
+    .production__images__container {
+        grid-template-columns: repeat(2, 50%);
+
+        gap: 0.5rem;
+        margin: 0.5rem;
+
+    }
+
+    .full__credits__container h1 {
+        font-size: x-large;
+    }
+
+    .full__credits__container p {
+        width: 90%;
+
+        font-size: large;
+    }
+
+    .full__credits__container h2 {
+        font-size: large;
+    }
+
+
+
+
+
+
+
+
+
+    /* ABOUT PAGE */
+
+
+    .about__page__container {
+        width: 100%;
+
+        flex-direction: column-reverse;
+
+    }
+
+    .work__history {
+        width: 100%;
+        text-align: center;
+
+        padding: 2rem;
+    }
+
+    .about__jack__description {
+        width: 100%;
+    }
+
+    .about__jack__description p {
+        text-align: center;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+@media screen and (max-width: 800px) {
+
+    
     /*Nav bar*/
 
     .navbar {
@@ -934,213 +1232,12 @@ body {
 
     }
 
-    /* HOME PAGE */
 
 
-    .hero {
-        height: 280px;
 
-        grid-template-columns: repeat(3, 33%);
-        grid-template-rows: repeat(4, 25%);
-    
-    }
 
-    .name__container {
-        margin: 0.5em;
 
-        grid-column: span 2;
-        grid-row: 2;
-    }
 
-
-    .name__container h1 {
-        font-size: x-large;
-    }
-    
-    .name__container h2 {
-        font-size: large ;
-
-    }
-    
-
-    .description {
-        margin: 0;
-        grid-column: 2 / span 2;
-        grid-row: 3/ span 2;
-    }
-
-    .description p {
-        font-size: small;
-        
-    }
-
-    .recent__work__container h1 {
-        font-size: xx-large;
-    }
-
-
-
-    .work__holders {
-        flex-wrap: wrap;
-        gap: 1rem;
-    }
-
-
-
-
-
-
-
-
-
-
-
-
-
-    /* PORTFOLIO */
-
-    .portfolio__work__holder {
-        width: 100%;
-    }
-
-    .title__container h1 {
-        font-size: xx-large;
-    }
-
-    .title__container h2 {
-        font-size: large;
-    }
-
-
-
-    .centre__container {
-        display: flex;
-        flex-direction: column;
-    }
-
-
-    .production__credits__holder {
-        justify-content: center;
-
-        display: grid;
-        grid-template-columns: repeat(2, 50%);
-    }
-
-    .production__credit__container {
-        text-align: center;
-        padding: 10px 0;
-    
-    }
-
-    .credits__container {
-        width: 100%;
-
-    }
-
-    .credits__container img {
-        width: 150px;
-    }
-
-    .credits__container h1 {
-        font-size:medium;
-    }
-    
-    .credits__container h3 {
-        font-size: medium;
-    }
-
-
-    .production__images__container {
-        grid-template-columns: repeat(2, 50%);
-
-        gap: 0.5rem;
-        margin: 0.5rem;
-
-    }
-
-    .full__credits__container h1 {
-        font-size: 2rem;
-    }
-
-    .full__credits__container p {
-        width: 80%;
-    }
-
-    .full__credits__container h2 {
-        font-size: x-large;
-    }
-
-
-
-
-
-
-
-
-
-    /* ABOUT PAGE */
-
-
-    .about__page__container {
-        width: 100%;
-
-        flex-direction: column-reverse;
-
-    }
-
-    .work__history {
-        width: 100%;
-    }
-
-    .about__jack__description {
-        width: 100%;
-    }
-
-
-
-
-
-
-
-
-
-
-
-    /* Project Thumbnails */
-
-    .project__thumbnail {
-        width: 300px;
-        height: 450px;
-    }
-
-
-    .project__thumbnail img {
-        width: 300px;
-        aspect-ratio: 1 / 1;
-        object-fit: cover;
-    }
-
-    .project__thumbnail h1 {
-        font-size: 2rem;
-
-    }
-
-    .project__thumbnail h2 {
-
-        font-size: 2rem;
-    }
-
-
-}
-
-
-
-
-
-
-
-
-@media screen and (max-width: 600px) {
 
 
     .production__images__container {
@@ -1151,12 +1248,97 @@ body {
 
 
 
+    /* Project Thumbnails */
+
+    .project__thumbnail {
+        width: 340px;
+        height: 445px;
+    }
+
+    .project__thumbnail img {
+        width: 340px;
+    }
+
+    
+    
+
 
 
     
- }
+}
+
+ @media screen and (max-width: 650px) {
 
 
+    /* Project Thumbnails */
+
+    .project__thumbnail {
+        width: 180px;
+        height: 235px;
+    }
+
+
+    .project__thumbnail img {
+        width: 180px;
+        aspect-ratio: 1 / 1;
+        object-fit: cover;
+    }
+
+    .project__thumbnail h1 {
+        font-size: large;
+
+    }
+
+    .project__thumbnail h2 {
+
+        font-size: large;
+    }
+
+
+
+    .hero  {
+
+        height: 50vh;
+
+        background-position-y: 100px;
+
+        background-size: cover;
+    }
+
+    .name__container {
+        grid-column: 1 / span 5;
+        grid-row: 1;
+    }
+
+    .name__container h1 {
+
+        font-size: 2.5rem;
+    }
+
+    .show__details {
+        grid-column: 1 / span 5;
+        grid-row: 5;
+    }
+
+
+
+
+    .footer__container p {
+        font-size: smaller;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+}
 
 
 
