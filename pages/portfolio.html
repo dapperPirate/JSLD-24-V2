@@ -9,7 +9,8 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500&family=Space+Grotesk:wght@400;700&display=swap" rel="stylesheet">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Sorts+Mill+Goudy:ital@0;1&display=swap" rel="stylesheet">
 
 </head>
 <body background="../assets/work/calendarGirls/CG - all.jpg">
@@ -30,55 +31,12 @@
 
     <div class="portfolio__work__holder">
 
-        <!-- <div class=project__thumbnail>
-            <a href="../portfolio/oedipus.html">
-                <img src="../assets/work/oedipus/logo.png" alt="Senaca's Oedipus">
-                <div class="project__thumbnail__text">
-                    <h1>Senaca's Oedipus</h1>
-                    <h2>The Cockpit Theatre</h2>
-                </div>
-            </a>
-        </div> -->
-
-        <div class=project__thumbnail>
-            <a href="../portfolio/nativity23.html">
-                <img src="../assets/work/nativity23/Simeon.jpg" alt="The Nativity Journey 2023">
-                <div class="project__thumbnail__text">
-                    <h1>The Nativity Journey</h1>
-                    <h2>Winterhsall Estate</h2>
-                </div>
-            </a>
-        </div>
-
-        <div class=project__thumbnail>
-            <a href="../portfolio/Cats.html">
-                <img src="../assets/work/cats/macavity.jpg" alt="sunflower turmoil">
-                <div class="project__thumbnail__text">
-                    <h1>Cats</h1>
-                    <h2>Camberley Theatre</h2>
-                </div>
-            </a>
-        </div>
-
-        <div class=project__thumbnail>
-            <a href="../portfolio/CalendarGirls.html">
-                <img src="../assets/work/calendarGirls/Sunflowe turmoil.jpg" alt="sunflower turmoil">
-                <div class="project__thumbnail__text">
-                    <h1>Calendar Girls</h1>
-                    <h2>Camberley Theatre</h2>
-                </div>
-            </a>
-        </div>
-
-        <div class=project__thumbnail>
-            <a href="../portfolio/9to5.html">
-                <img src="../assets/work/9to5/9to5-stay out.jpg" alt="Stay Out">
-                <div class="project__thumbnail__text">
-                    <h1>9 to 5</h1>
-                    <h2>Camberley Theatre</h2>
-                </div>
-            </a>
-        </div>
+        
+        <div id="project__thumbnail__1"></div>
+        <div id="project__thumbnail__2"></div>
+        <div id="project__thumbnail__3"></div>
+        <div id="project__thumbnail__4"></div>
+        <div id="project__thumbnail__5"></div>
 
 
     </div>
@@ -100,6 +58,19 @@
         </script>
 
     <!--End of Footer-->
+
+
+
+    <script>
+        $(function(){
+          $("#project__thumbnail__1").load("../projectThumbnails/oedipus24.html");
+          $("#project__thumbnail__2").load("../projectThumbnails/nativity23.html");
+          $("#project__thumbnail__3").load("../projectThumbnails/cats23.html");
+          $("#project__thumbnail__4").load("../projectThumbnails/calenderGirls23.html");
+          $("#project__thumbnail__5").load("../projectThumbnails/9to523.html");
+
+        });
+        </script>
 
 
 </body>
