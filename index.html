@@ -10,10 +10,9 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&family=Unbounded:wght@200..900&display=swap" rel="stylesheet"></head>
 
-    <link href="https://fonts.googleapis.com/css2?family=Sorts+Mill+Goudy:ital@0;1&display=swap" rel="stylesheet">
-</head>
-<body>
+    <body>
 
     <!--Navigation bar-->
 
@@ -32,19 +31,16 @@
 
     <div class="hero">
 
-        <div class="name__container fade-in">
-            <h1>JACK SHORTER</h1>
-            <h2>Lighting Designer & Programmer</h2>
+        <div class="hero__image__wrapper">
+            <img src="assets/work/oedipus/Web-Oedipus-Credit-SteveGregson-125.jpg" alt="">
         </div>
 
-        <a class="fade-in" href="#recent__work__container">SCROLL</a></a>
 
-
-
-        <div class="show__details fade-in">
-            <h3>Show / Senaca's Oedipus</h3>
-            <h3>Venue / The Cockpit</h3>
+        <div class="show__details">
+            <h3>SHOW / SENACA'S OEDIPUS</h3>
+            <h3>VENUE / THE COCKPIT</h3>
         </div>
+
 
     </div>
     <!--end of Hero-->
@@ -59,16 +55,17 @@
     <!-- Recent Work -->
     <div class="recent__work__container" id="recent__work__container">
 
-        <h1>RECENT WORK</h1>
 
-        <a href="../pages/portfolio.html" id="portfolio__button">see all work</a>
+        <div class="recent__work__container__text">
+            <h1>FEATURED WORK</h1>
+            <a href="../pages/portfolio.html" id="portfolio__button">see all work</a>
+        </div>
 
 
         <div class="work__holders">
 
-
             <div id="project__thumbnail__1"></div>
-
+            <div id="project__thumbnail__2"></div>
 
         </div>
 
@@ -95,6 +92,7 @@
     <script>
         $(function(){
           $("#project__thumbnail__1").load("projectThumbnails/oedipus24.html");
+          $("#project__thumbnail__2").load("projectThumbnails/nativity23.html");
 
         });
         </script>
