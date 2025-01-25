@@ -3,7 +3,7 @@
     --blue: #063853;
     --lightBlue: #1683be;
     --darkBlue: #126490;
-    --orange: #ff8c00;
+    --orange: #ff9124;
 
     --highlightColor: #063853b8;
 
@@ -845,7 +845,7 @@ body {
 
 .project__thumbnail {
     width: 500px;
-    height: 610px;
+    height: 620px;
 
     background-color: rgb(17, 49, 84);
 
@@ -1044,6 +1044,14 @@ body {
         font-size: 1.7rem;
     }
 
+    .project__thumbnail {
+        width: 330px;
+        height: 420px;
+    }
+
+    .project__thumbnail img {
+        width: 330px;
+    }
 
 
 
@@ -1330,7 +1338,7 @@ body {
 
     .project__thumbnail {
         width: 300px;
-        height: 370px;
+        height: 375px;
 
         border-width: 4px;
 
@@ -1352,9 +1360,7 @@ body {
     }
 
 
-
     /* Home Page */
-
 
     .hero  {
         height: auto;
@@ -1368,10 +1374,13 @@ body {
         aspect-ratio: 2 / 1 ;
     }
 
+    .show__details {
+        height: min-content;
+    }
+
     .show__details h3 {
-
         font-size: medium;
-
+        padding: 0;
     }
 
 
