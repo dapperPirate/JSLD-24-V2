@@ -3,7 +3,7 @@
     --blue: #063853;
     --lightBlue: #1683be;
     --darkBlue: #126490;
-    --orange: #ff8c00;
+    --orange: #ff8f18;
 
     --highlightColor: #063853b8;
 
@@ -16,8 +16,8 @@
     --paragraphSize: 2rem;
 
     --headingFont: "Unbounded";
-    --subheadingFont: "Space Grotesk";
-    --paragraphFont: "Space Grotesk";
+    --subheadingFont: "Montserrat";
+    --paragraphFont: "Montserrat";
 
 
     --translucentBG: rgba(19, 19, 19, 0.65);
@@ -543,7 +543,7 @@ body {
 
     padding: 15px 0;
 
-    font-weight: 100;
+    font-weight: 400;
 
 }
 
@@ -649,7 +649,7 @@ body {
 
 .work__history h3 {
     font-size: xx-large;
-    font-weight: 200;
+    font-weight: 400;
     
     font-family: var(--subheadingFont);
 
