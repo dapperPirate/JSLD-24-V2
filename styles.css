@@ -3,6 +3,8 @@
     --blue: #063853;
     --lightBlue: #1683be;
     --darkBlue: #126490;
+    --mediumBLue: #0f5a82; 
+
     --orange: #ff8c00;
 
     --highlightColor: #063853b8;
@@ -327,6 +329,9 @@ body {
     text-decoration: underline;
 
     color: var(--lightBlue);
+
+    text-shadow: 3px 3px orange;
+
 }
 
 .work__holders {
@@ -377,6 +382,8 @@ body {
     font-family: var(--headingFont);
     font-size: 5rem;
     color: var(--darkBlue);
+    text-shadow: 3px 3px orange;
+
 }
 
 
@@ -429,7 +436,7 @@ body {
 
 
 #divider__line {
-    background-color: var(--darkBlue);
+    background-color: var(--mediumBLue);
     border-width: 0;
     height: 6px;
     width: 100%;
@@ -439,13 +446,14 @@ body {
 .centre__container {
     height: auto;
     display: flex;
+    flex-direction: column;
 }
 
 .credits__container {
     background-color: var(--translucentBG);
 
-    min-width: 325px;
-    height: inherit;
+    /* min-width: 350px; */
+    height: auto;
 
     padding: 10px 20px;
 
@@ -476,10 +484,14 @@ body {
 
 
 .production__credits__holder {
-    padding-top: 15px;
+
+    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(4, 25%);
 }
 
 .production__credit__container {
+    text-align: center;
     padding: 15px 0px;
 
 }
@@ -856,6 +868,9 @@ body {
     border-color: orange;
     border-width: 6px;
     border-style:solid;
+    /* border-radius: 15px; */
+    border-top-right-radius: 25px;
+    border-bottom-left-radius: 25px;
 
 }
 
@@ -1394,10 +1409,11 @@ body {
     }
 
     .recent__work__container__text {
-        gap: 1rem;
+        gap: 0.3rem;
     }
     .recent__work__container__text h1 {
         font-size: x-large;
+        text-shadow: 1px 1px orange;
     }
 
     .recent__work__container #portfolio__button {
