@@ -1,0 +1,80 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSLD - Portfolio</title>
+    <link rel="icon" href="../assets/logos/icon.png">
+    <link rel="stylesheet" href="../styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Unbounded:wght@200..900&display=swap" rel="stylesheet"></head>
+
+</head>
+<body >
+
+    <!--Navigation bar-->
+
+    <div id="nav-placeholder"></div>
+
+    <script>
+        $(function(){
+          $("#nav-placeholder").load("pages/common/nav.html");
+        });
+        </script>
+
+    <!--end of Navigation bar-->
+
+
+    <div class="page__title__section">
+      <h1>PORTFOLIO</h1>
+    </div>
+
+    <div class="portfolio__work__holder">
+
+         <div id="project__thumbnail__6"></div>
+
+        <div id="project__thumbnail__1"></div>
+        <div id="project__thumbnail__2"></div>
+        <div id="project__thumbnail__3"></div>
+        <div id="project__thumbnail__4"></div>
+        <div id="project__thumbnail__5"></div>
+
+    </div>
+
+
+
+
+
+
+    
+    <!--Footer-->
+
+    <div id="footer-placeholder"></div>
+
+    <script>
+        $(function(){
+          $("#footer-placeholder").load("common/footer.html");
+        });
+        </script>
+
+    <!--End of Footer-->
+
+
+
+    <script>
+        $(function(){
+          $("#project__thumbnail__1").load("../projectThumbnails/oedipus24.html");
+          $("#project__thumbnail__2").load("../projectThumbnails/nativity23.html");
+          $("#project__thumbnail__3").load("../projectThumbnails/cats23.html");
+          $("#project__thumbnail__4").load("../projectThumbnails/calenderGirls23.html");
+          $("#project__thumbnail__5").load("../projectThumbnails/9to523.html");
+          $("#project__thumbnail__6").load("../projectThumbnails/nativity24.html");
+
+        });
+        </script>
+
+
+</body>
+</html>
