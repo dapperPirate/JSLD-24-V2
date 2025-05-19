@@ -1069,7 +1069,7 @@ body {
         background: rgba(13, 33, 56, 0.9);
         backdrop-filter: blur(0.2rem);
         padding-top: 4em;
-        z-index: 8000;
+        z-index: 9000;
 
         height: min-content;
 
@@ -1094,7 +1094,7 @@ body {
         aspect-ratio: 1;
         right: 3em;
         top: 3em;
-        z-index: 9000;
+        z-index: 9001;
 
         display: block;
     }
@@ -1139,8 +1139,8 @@ body {
     /* Project Thumbnails */
 
     .project__thumbnail {
-        width: 300px;
-        height: 300px;
+        width: 200px;
+        height: 200px;
 
         border-width: 4px;
 
@@ -1148,17 +1148,17 @@ body {
 
 
     .project__thumbnail img {
-        width: 300px;
+        width: 200px;
         aspect-ratio: 1 / 1;
         object-fit: cover;
     }
 
     .project__thumbnail h1 {
-        font-size: 1.2rem;
+        font-size: 0.8rem;
     }
 
     .project__thumbnail h2 {
-        font-size: 1.2rem;
+        font-size: 0.8rem;
     }
 
 
@@ -1253,7 +1253,7 @@ body {
 
     .footer__container {
         
-        height: 800px;
+        height: 450px;
 
     }
 
