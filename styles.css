@@ -1,6 +1,21 @@
 :root {
 
     --blue: #063853;
+<<<<<<< Updated upstream
+=======
+    --lightBlue: #1683be;
+    --darkBlue: #126490;
+    --mediumBLue: #0f5a82; 
+
+    --orange: #ff8c00;
+    --darkOrange: #bc5e00;
+
+    --DARKprimaryBG: #121212;
+    --DARKsecondaryBG: #1d1d1d;
+
+    --primaryBG: #ededed;
+    --secondaryBG: #f7f7f7;
+>>>>>>> Stashed changes
 
     --highlightColor: #063853b8;
 
@@ -8,7 +23,7 @@
     --subHeadingColor: white;
     --textHover: orange;
 
-    --headingSize: 4rem;
+    --headingSize: xx-large;
     --subheadingSize: 2rem;
     --paragraphSize: 2rem;
     
@@ -17,10 +32,23 @@
     --paragraphFont: "Sorts Mill Goudy";
 
     --translucentBG: rgba(19, 19, 19, 0.8);
+<<<<<<< Updated upstream
 
 }
 
 html {background-color: black}
+=======
+    --translucentBGLight: rgba(1, 1, 1, 0.8);
+
+    --maxWidth: 80%;
+
+}
+
+
+
+
+html {background-color:var(--primaryBG)}
+>>>>>>> Stashed changes
 
 * {
     box-sizing: border-box;
@@ -89,15 +117,35 @@ body {
     align-items: center;
     position: sticky;
     top: 0;
+<<<<<<< Updated upstream
     z-index: 999;
+=======
+    z-index: 9999;
+
+    overflow: visible;
+
+
+>>>>>>> Stashed changes
 }
 
 .navbar__container {
     display: grid;
     grid-template-columns: repeat(3, 33%);
     z-index: 1;
+<<<<<<< Updated upstream
     width: 100%;
     margin: a auto;
+=======
+    width: var(--maxWidth);
+    max-width: var(--maxWidth);
+    margin: 0 auto;
+
+    background-color: var(--secondaryBG);
+    border-radius: 30px;
+    padding: 15px;
+
+
+>>>>>>> Stashed changes
 
 }
 
@@ -106,7 +154,17 @@ body {
     display: flex;
     list-style: none;
 
+<<<<<<< Updated upstream
     margin: auto 0;
+=======
+    justify-content: left;
+
+    font-family: var(--headingFont);
+    font-size: x-large;
+
+    color: var(--orange); 
+    
+>>>>>>> Stashed changes
 
     color: white;
     text-decoration: none;
@@ -114,6 +172,24 @@ body {
     width: auto;
     transition: all 0.1s ease;
 
+<<<<<<< Updated upstream
+=======
+    grid-column: 1 / span 2;
+    grid-row: 1;
+
+}
+
+.navbar__title:hover {
+    color: var(--darkOrange);
+    transition: all 0.3s ease;
+}
+
+.navbar__title__short {
+    display: none;
+
+    list-style: none;
+
+>>>>>>> Stashed changes
     margin: 0 auto;
 
     grid-column: 2;
@@ -137,9 +213,8 @@ body {
 
 .navbar__menu {
     display: flex;
-    align-items: center;
-    list-style: none;
 
+<<<<<<< Updated upstream
     grid-column: 2;
 
     margin: 0 auto;
@@ -150,6 +225,21 @@ body {
     font-family: var(--headingFont);
     font-weight: bold;
     font-size: 2rem;
+=======
+    justify-content: right;
+    align-items: right;
+
+    grid-column: 3;
+    grid-row: 1;
+
+}
+
+
+.navbar__links {
+    font-family: var(--subheadingFont);
+    font-weight: 500;
+    font-size: x-large;
+>>>>>>> Stashed changes
 
     text-decoration: underline;
     text-decoration-thickness: 3px;
@@ -165,11 +255,9 @@ body {
 
     transition: all 0.1s ease;
 
-
-    border-radius: 0px;
-
-
     margin: 0 auto;
+
+
 }
 
 .navbar__links:hover{
@@ -213,7 +301,12 @@ body {
 
 
 .hero {
+<<<<<<< Updated upstream
     height: 95vh;
+=======
+    width: var(--maxWidth);
+    max-width: var(--maxWidth);
+>>>>>>> Stashed changes
 
     display: grid;
 
@@ -237,12 +330,30 @@ body {
 
 }
 
+<<<<<<< Updated upstream
 /* .hero img {
+=======
+.hero__carousel {
+    height: auto;
+
+    background-color: var(--secondaryBG);
+
+    border-radius: 15px;
+
+
+}
+.carousel__dots {
+    margin: 0 auto;
+}
+
+.hero__image__wrapper {
+>>>>>>> Stashed changes
 
     width: 100%;
 
     grid-column: 1 / span 5;
 
+<<<<<<< Updated upstream
     -webkit-animation-delay: 0s;
     -moz-animation-delay: 0s;
     animation-delay: 0;
@@ -264,6 +375,9 @@ body {
     -webkit-animation-delay: 1s;
     -moz-animation-delay: 1s;
     animation-delay: 1s;
+=======
+    /* border-radius: 15px 15px 0 0; */
+>>>>>>> Stashed changes
 
 
 }
@@ -315,11 +429,20 @@ body {
 
     margin: auto;
 
+<<<<<<< Updated upstream
     grid-column: 1 / span 2;
     grid-row: 5;
 
     width: 600px;
     height: 50px;
+=======
+    height: auto;
+
+    padding: 15 0 15 15;
+
+    background-color: var(--secondaryBG);
+    border-radius: 0 0 15px 15px;
+>>>>>>> Stashed changes
 
     -webkit-animation-delay: 2s;
     -moz-animation-delay: 2s;
@@ -328,6 +451,11 @@ body {
 
 .show__details h3 {
     font-family: var(--headingFont);
+<<<<<<< Updated upstream
+=======
+    font-size: x-large;
+    color: var(--darkBlue);
+>>>>>>> Stashed changes
 
     padding: 30px;
     color: white;
@@ -379,6 +507,10 @@ body {
 
 
 .recent__work__container {
+<<<<<<< Updated upstream
+=======
+
+>>>>>>> Stashed changes
 
     min-height: 1000px;
     
@@ -391,6 +523,8 @@ body {
     background-position-x: center;
     text-align: center;
 
+
+    grid-column: 1 / span 2;
 
 }
 
@@ -414,6 +548,7 @@ body {
 
 
 
+<<<<<<< Updated upstream
 .recent__work__container #portfolio__button {
 /* 
     border: bisque;
@@ -426,6 +561,12 @@ body {
     font-family: var(--headingFont);
     font-size: 2rem;
     
+=======
+    font-family: var(--subheadingFont);
+    font-weight: 500;
+    font-size: x-large;
+/*     
+>>>>>>> Stashed changes
     text-decoration: underline;
     text-decoration-thickness: 3px;
     text-decoration-color: var(--secondaryTextColor);
@@ -437,10 +578,33 @@ body {
     z-index: 100;
 
     padding: 5px;
+<<<<<<< Updated upstream
+=======
+}
+
+.recent__work__container #portfolio__button:hover {
+    color: var(--blue);
+    transition: all 0.3s ease;
+}
+
+
+
+.page__title__section {
+    margin: 30px auto;
+    text-align: center;
+
+}
+.page__title__section h1 {
+    font-family: var(--headingFont);
+    font-size: x-large;
+    color: var(--darkBlue);
+    text-shadow: 3px 3px orange;
+>>>>>>> Stashed changes
 
 }
 
 
+<<<<<<< Updated upstream
 
 
 
@@ -456,6 +620,54 @@ body {
 
 
 /* Project Page */
+=======
+.home__split {
+    margin: 0 auto;
+    margin-top: 75px;
+
+    display: grid;
+    grid-template-columns: repeat(3, 33%);
+
+    width: var(--maxWidth);
+    max-width: var(--maxWidth);}
+
+.about__jack__description {
+    text-align: right;
+
+    padding: 0 25px;
+
+    margin: 0 auto;
+}
+
+.about__jack__description h2 {
+    font-size: 2.5rem;
+
+    text-shadow: 2px 2px orange;
+    font-family: var(--headingFont);
+}
+
+.about__jack__description h3 {
+
+    font-weight: lighter;
+    font-style: italic;
+
+    font-size: x-large;
+    color: orange;
+}
+
+
+.about__jack__description p {
+    font-family: var(--subheadingFont);
+    
+    margin-top: 2rem;
+    font-size: large;
+
+    text-align: right;
+}
+
+
+/* Project Page ############################################################################################################################## */
+>>>>>>> Stashed changes
 
 .title__container {
 
@@ -475,6 +687,7 @@ body {
 .title__container h1 {
     font-family: var(--headingFont);
     font-size: 5rem;
+    text-transform: uppercase;
 
     color: var(--headingColor);
 }
@@ -540,11 +753,28 @@ body {
 
 
 .production__credits__holder {
+<<<<<<< Updated upstream
     padding-top: 15px;
 }
 
 .production__credit__container {
     padding: 15px 0px;
+=======
+
+    justify-content: center;
+    display: flex;
+
+
+}
+
+.production__credit__container {
+    text-align: center;
+    /* padding: 15px 0px; */
+    width: auto;
+
+    padding: 25px;
+
+>>>>>>> Stashed changes
 
 }
 
@@ -600,7 +830,7 @@ body {
     margin: 0 auto;
     width: 90%;
 
-    font-size: x-large;
+    font-size: large;
 
     padding: 15px 0;
 
@@ -608,8 +838,17 @@ body {
 }
 
 .full__credits__container h2 {
+<<<<<<< Updated upstream
     font-size: xx-large;
     padding-top: 30px;
+=======
+    font-size: x-large;
+    padding-top: 60px;
+
+    font-weight: 600;
+
+    color: black;
+>>>>>>> Stashed changes
 
     font-weight: normal;
 }
@@ -718,10 +957,8 @@ body {
 }
 
 
-.about__jack__description {
-    width: 50%;
-    text-align: center;
 
+<<<<<<< Updated upstream
     padding: 0 25px;
 
 }
@@ -753,6 +990,8 @@ body {
 
     text-align: left;
 }
+=======
+>>>>>>> Stashed changes
 
 
 
@@ -821,17 +1060,50 @@ body {
 /* Footer */
 
 .footer__container {
+<<<<<<< Updated upstream
     height: 200px;
 
     justify-content: center;
     text-align: center;
+=======
+    margin-top: 10vh;
+    height: 500px;
+
+    align-items: center;
+
+    font-family: var(--subheadingFont);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    background-color: var(--secondaryBG);
+}
+
+.footer__upper__section {
+    padding: var(--edgePadding);
+    gap: 6rem;
+    display: flex;
+    flex-wrap: wrap;
+
+    overflow: hidden;
+>>>>>>> Stashed changes
 
     background-color: var(--blue);
 }
 
 .footer__container img {
+<<<<<<< Updated upstream
     width: 150px;
     filter: brightness(120%);
+=======
+    filter: brightness(110%);
+    width: 400px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+>>>>>>> Stashed changes
 }
 
 
@@ -863,11 +1135,17 @@ body {
 
     overflow: hidden;
 
+<<<<<<< Updated upstream
     padding-bottom: 10px;
 
     border-color: orange;
     border-width: 3px;
     border-style:solid;
+=======
+    position: relative;
+
+    border-radius: 5px;
+>>>>>>> Stashed changes
 }
 
 
@@ -976,6 +1254,93 @@ body {
         background-position-y: 100px;
 
 
+<<<<<<< Updated upstream
+=======
+       
+    
+    /*Nav bar*/
+
+
+    /* .navbar {
+        height: 75px;
+    } */
+
+
+    .navbar__menu {
+        position: fixed;
+        
+        top: 0;
+        right: 0;
+        flex-direction: column;
+        display: flex;
+        /* background: rgba(var(--blue), 0.7); */
+        background-color: rgba(1, 50, 75, 0.7);
+        backdrop-filter: blur(0.2rem);
+        padding-top: 4em;
+        z-index: 9000;
+
+        height: 100%;
+        width: 30%;
+        border-bottom-left-radius: 15px;
+
+        transform: translateX(100%);
+        transition: transform 250ms ease-out; 
+
+    }
+
+    .navbar__menu[data-visible='true'] {
+        transform: translateX(0%);
+    }
+
+    .mobile__nav__toggle {
+        position: absolute;
+        background-color: transparent;
+        background-image: url(assets/icons/burger.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 2.5rem;
+        border: 0;
+        aspect-ratio: 1;
+        right: 3em;
+        top: 3em;
+        z-index: 9001;
+
+        display: block;
+    }
+
+    .mobile__nav__toggle[expanded='true'] {
+        background-image: url(assets/icons/close.svg);
+    }
+
+    .navbar__item {
+        padding: 3em 0;
+    }
+
+    .navbar__links {
+        font-size: xx-large;
+        color: white;
+    }
+
+
+    .navbar__container {
+        display: grid;
+        grid-template-columns: repeat(4, 25%);
+        z-index: 1;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .navbar__title__short {
+        display: flex;
+    }
+
+    .navbar__title {
+        display: none;
+    }
+
+    .show__details h3 {
+        font-size: large;
+>>>>>>> Stashed changes
     }
 
 
@@ -1289,6 +1654,15 @@ body {
 
  @media screen and (max-width: 650px) {
 
+<<<<<<< Updated upstream
+=======
+
+
+    .work__holders {
+        flex-direction: column;
+    }
+
+>>>>>>> Stashed changes
 
     /* Project Thumbnails */
 
@@ -1336,8 +1710,81 @@ body {
     }
 
     .show__details {
+<<<<<<< Updated upstream
         grid-column: 1 / span 5;
         grid-row: 5;
+=======
+        height: min-content;
+    }
+
+    .show__details h3 {
+        font-size: small;
+        padding: 0;
+    }
+
+
+    .page__title__section h1 {
+        font-size: 3rem;
+    }
+
+
+    .recent__work__container {
+        padding: 30px;
+    }
+
+    .recent__work__container__text h1 {
+        font-size: x-large;
+    }
+
+    .recent__work__container #portfolio__button {
+        font-size: large;
+        padding-left: 0px;
+
+    }
+
+    .work__holders {
+        gap: 0.5rem;
+    }
+
+
+
+
+    /* About Page */
+
+    .about__jack__description h2 {
+        font-size: 3rem;
+    }
+
+    .about__jack__description h3 {
+        font-size: 1.5rem;
+    }
+
+    .about__jack__description p {
+        font-size: large;
+    }
+
+    .work__history h1 {
+        font-size: xx-large;
+    }
+
+    .work__history h2 {
+        font-size: xx-large;
+    }
+
+    .work__history h3 {
+        font-size: medium;
+    }
+
+    /* Project Page */
+
+
+    .title__container h1 {
+        font-size: xx-large;
+    }
+
+    .title__container h2 {
+        font-size: medium;
+>>>>>>> Stashed changes
     }
 
 
