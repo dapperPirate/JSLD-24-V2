@@ -5,8 +5,11 @@
     <title>Jack Shorter Lighting Design</title>
     <link rel="icon" href="assets/logos/icon.png">
     <link rel="stylesheet" href="styles.css">
-
+    <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+    
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script type="text/javascript" src="slick/slick.min.js"></script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -31,29 +34,36 @@
 
     <div class="hero">
 
-        <div class="hero__image__wrapper">
-            <img src="assets/work/oedipus/Web-Oedipus-Credit-SteveGregson-125.jpg" alt="">
+    <div class="hero__carousel">
+        <div>
+            <div class="hero__image__wrapper">
+                <img src="assets/work/oedipus/Web-Oedipus-Credit-SteveGregson-125.jpg" alt="">
+            </div>
+            <div class="show__details">
+                <h3>- SHOW / SENACA'S OEDIPUS</h3>
+                <h3>VENUE / THE COCKPIT</h3>
+            </div>
         </div>
 
-
-        <div class="show__details">
-            <h3>- SHOW / SENACA'S OEDIPUS</h3>
-            <h3>VENUE / THE COCKPIT</h3>
+        <div>
+            <div class="hero__image__wrapper">
+                <img src="assets/logos/new_big_logo.png" alt="">
+            </div>
+            <div class="show__details">
+                <h3>- SHOW / MARKET BOY</h3>
+                <h3>VENUE / THE COCKPIT</h3>
+            </div>
         </div>
 
+    </div>
 
     </div>
     <!--end of Hero-->
 
+    <div class="home__split">
 
-    <div class="hero__about">
-
-
-    </div>
-
-
-    <!-- Recent Work -->
-    <div class="recent__work__container" id="recent__work__container">
+        <!-- Recent Work -->
+        <div class="recent__work__container" id="recent__work__container">
 
 
         <div class="recent__work__container__text">
@@ -66,13 +76,33 @@
 
             <div id="project__thumbnail__1"></div>
             <div id="project__thumbnail__2"></div>
+            <div id="project__thumbnail__3"></div>
 
         </div>
 
 
 
+        </div>
+
+                <div class="about__jack__description">
+                    <h2>JACK SHORTER</h2>
+                    <h3>Lighting Designer & Programmer</h2>
+                    <p>
+
+                        Jack Shorter is a Lighting Designer & Programmer based in Surrey and Hampshire. His work is primarily focused within the 
+                        theatrical world, but is always looking for opportunities to work outside of traditional boundaries.
+                        <br><br>
+
+                        Jacks body of work ranges from musicals performed in regional venues to intimate black box productions and plays 
+                        performed in retrofit barns in the Hampshire countryside.
+                        <br><br>
+
+                        He can be contacted on this email address: jack@jackshorterlightingdesign.co.uk
+        
+                    </p>
+        </div>
+
     </div>
-    <!-- end of Recent Work -->
 
 
     <!--Footer-->
@@ -91,12 +121,34 @@
 
     <script>
         $(function(){
-          $("#project__thumbnail__1").load("projectThumbnails/nativity24.html");
-          $("#project__thumbnail__2").load("projectThumbnails/oedipus24.html");
+          $("#project__thumbnail__1").load("projectThumbnails/marketBoy.html");
+          $("#project__thumbnail__2").load("projectThumbnails/nativity24.html");
+          $("#project__thumbnail__3").load("projectThumbnails/oedipus24.html");
 
         });
-        </script>
 
+        $(document).ready(function(){
+        $('.hero__carousel').slick({
+            autoplay: true,
+            arrows: false,
+            // dots: true,
+            // dotsClass: 'slick-dots'
+
+
+            
+        });
+    });
+
+
+    </script>
+
+        <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+        <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+        <script type="text/javascript" src="slick/slick.min.js"></script>
+                
+
+        
     
 </body>
+
 </html>
