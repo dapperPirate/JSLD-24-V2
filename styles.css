@@ -515,7 +515,8 @@ body {
 /* Portfolio Page ############################################################################################################################## */
 
 .portfolio__work__holder {
-    max-width: 80%;
+    max-width: var(--maxWidth);
+    width: var(--width);
 
     display: flex;
     flex-wrap: wrap;
@@ -650,6 +651,13 @@ body {
 
     --width: 90%;
   }
+
+
+    .home__split {
+    grid-template-columns: 100%;
+    grid-template-rows: 50%, 50%;
+    gap: 2rem;
+}
 }
 
 @media screen and (max-width: 900px) {
@@ -664,11 +672,7 @@ body {
         font-size: large;
     }
 
-    .home__split {
-        grid-template-columns: 100%;
-        grid-template-rows: 50%, 50%;
-        gap: 2rem;
-    }
+
 
     .show__details {
         padding-top: 10px;
@@ -885,6 +889,11 @@ body {
     .project__thumbnail h2 {
         font-size: small;
     }
+
+    /* HOME PAGE */
+    .about__jack__description h2 {
+    text-shadow: 1.5px 1.5px orange;
+}
 
 
 
