@@ -16,7 +16,6 @@
     --width:80%;
 
 
-
     --highlightColor: #063853b8;
 
     --headingColor: white;
@@ -218,13 +217,21 @@ body {
     flex-direction: column;
     overflow: hidden;
 
-
 }
 
 .hero__image__wrapper img {
-    align-self: center;
-    scale: 2;
+    align-self:center;
+    scale:2;
+
+    &.short {
+        scale: 1;
+        width: 100%;
+        object-fit: cover;
+        object-position: center top;
+
+    }
 }
+
 
 .show__details {
     display: flex;
@@ -357,7 +364,7 @@ body {
 /* Project Page ############################################################################################################################## */
 
 .title__container {
-    padding: 15px 0;
+    padding: 15px 0 0 0;
 
     justify-content: center;
     margin: 0 auto;
@@ -397,12 +404,11 @@ body {
 }
 
 .credits__container {
-
     height: auto;
-
-    /* padding: 10px 20px; */
-
     text-transform: uppercase;
+
+    padding: 20px 0;
+
 }
 
 .credits__container h1 {
@@ -420,6 +426,11 @@ body {
 }
 
 
+.divider {
+  border: 2px solid black;
+  border-radius: 5px;
+}
+
 .production__credits__holder {
 
     justify-content: center;
@@ -429,6 +440,7 @@ body {
     flex-wrap: wrap;
 
     margin-top: 15px;
+    margin-bottom: 15px;
     gap: 1rem;
 }
 
@@ -440,7 +452,7 @@ body {
 
 
 .production__images__container {
-    margin: 0.5rem;
+    margin: 0 0.5rem 0.5rem 0;
     justify-content: center;
     display: grid;
     grid-template-columns: repeat(4, 24.5%);
@@ -481,6 +493,9 @@ body {
 
     text-transform: uppercase;
 
+    width: var(--width);
+    max-width: var(--maxWidth);
+
 }
 
 .full__credits__container h1 {
@@ -492,7 +507,6 @@ body {
     font-family: var(--subheadingFont);
     letter-spacing: 2px;
     margin: 0 auto;
-    width: 90%;
 
     font-size: large;
 
