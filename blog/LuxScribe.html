@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jack Shorter Lighting Design</title>
+    <link rel="icon" href="../assets/logos/icon.png">
+    <link rel="stylesheet" href="../styles.css">
+
+    <link href="../lightbox/lightbox.css" rel="stylesheet" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Unbounded:wght@200..900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!--Navigation bar-->
+
+    <div id="nav-placeholder"></div>
+
+    <script>
+        $(function(){
+          $("#nav-placeholder").load("../../pages/common/nav.html");
+        });
+        </script>
+
+    <!--end of Navigation bar-->
+
+    <div class="blog__content__holder">
+
+        <div class="blog__title">
+            <h1>LuxScribe</h1>
+        </div>
+        <div class="blog__subheading">
+            <h3>My Custom Paperwork Generator</h3>
+        </div>
+
+        <div class="blog__paragraph">
+            <p>
+                For the last few weeks I have been working on a desktop application to generate lighting related paperwork such as fixture
+                reports, color calls, and hopefully much more! Now that the application somewhat works I wanted to dive in and talk 
+                about how and why it works.
+                <br><br>
+                (most images can be clicked to enlarge)
+            </p>
+        </div>
+
+        <h4 class="blog__paragraph__subheading centre">What about Lightwright?</h4>
+
+        <div class="blog__paragraph">
+
+            <p>
+                As you may know, the only "real" solution to creating lighting based paperwork is the much loved Lightwright. Lightwright has existed
+                in one form or another since 1973. In that time, it has largely been written and maintained by just one man, John McKernon. His legacy
+                will be nothing short of legendary within this industry and nothing within this post is designed to disrespect Lightwright, John or the wider team.
+            </p>
+            <p>
+               Lightwright is a fantastic product, its ubiquitous across the industry for a good reason. With the introduction of Lightwright 7, the pricing structure
+               moved to a subscription based plan, rather than the perpetual license that had been previously offered. At the time of writing, two subscription
+               plans are available, $39 a month (£28.58), or $399 a year (£292.41). I think this actually isn't that outlandish of a price for a product that is 
+               used in top level venues across the globe (Especially when you compare that price to a year of Vectorworks!). 
+            </p>
+            <p>
+                Reading that announcement got me thinking, how hard could it be to create an application that does the same thing as Lightwright? 
+            </p>
+            <p>
+                Well, nearly two months later, and, at a guess, a full weeks worth of time spent programming, I've built an application that just barely scratches 
+                the surface.
+            </p>
+            <p>
+                Enter, LuxScribe! 
+            </p>
+        </div>
+
+        <h4 class="blog__paragraph__subheading centre">LuxScribe (Name Pending)</h4>
+        
+        <div class="blog__paragraph right">
+            <div class="blog__image__holder">
+                <img style="max-width: 40%;" src="../assets/blogPosts/paperworkGen/blogImages/appIcon.png" alt="">
+                <h4>The LuxScribe icon!</h4>
+            </div>
+            <div class="paragraph__separator">
+            <p>
+                LuxScribe is a desktop application written in java, meaning it can run on Windows, MacOS and Linux.
+            </p>
+
+            <p>
+                As it stands, it does not remotely stack up to Lightwright in terms of features, and almost certainly never will. 90% of the reason I 
+                started working on this was because I enjoy software programming, and I wanted to see how complex something like this would be to build.
+            </p>
+
+            <p>
+                The operational concept is identical to lightwright, you link in the Vectorworks provided XML file, parse that data, 
+                and lay it out in different templates for exporting. The XML file used in this blog post contains data from an early draft of a production 
+                I am working on later this year.
+            </p>
+
+            </div>
+        </div>
+
+        <div class="blog__paragraph left">
+            <div class="blog__image__holder">
+                <a data-lightbox="worksheet" href="../assets/blogPosts/paperworkGen/blogImages/worksheetUI.png" data-caption="Light Mode">
+                    <img class=image src="../assets/blogPosts/paperworkGen/blogImages/worksheetUI.png" alt="Worksheet UI"></a>
+
+                <a data-lightbox="worksheet" href="../assets/blogPosts/paperworkGen/blogImages/worksheetUIDark.png" data-caption="Dark Mode"></a>
+                <h4>The Worksheet UI</h4>
+            </div>
+            <div class="paragraph__separator">
+            <p>
+                The interface is very similar to lightwright 6, if it ain't broke...
+            </p>
+
+            <p>
+                Upon opening a project, LuxScribe parses (reads) the XML file and loads everything into an internal database. At the same time,
+                it lays everything out in the worksheet view.
+            </p>
+
+            <p>
+                Currently, the XML file cannot be edited directly from the worksheet view, though that is a feature being currently worked on. 
+            </p>
+            </div>
+        </div>
+
+
+        <div class="blog__paragraph">
+            <p>
+                The Interface supports both Light and Dark mode. Click on the image to see both.
+            </p>
+
+            <p>
+                Paperwork is controlled by an html and css template. These templates are placed in a folder and automatically discovered by LuxScribe
+                upon opening the application.
+            </p>
+        </div>
+
+        <div class="blog__margin"></div>
+
+        <div class="blog__paragraph right">
+            <div class="blog__image__holder">
+                <a data-lightbox="template" href="../assets/blogPosts/paperworkGen/blogImages/template.png">
+                    <img class=image src="../assets/blogPosts/paperworkGen/blogImages/template.png" alt="HTML Template"></a>
+                <h4>The template for a Fixture Report</h4>
+            </div>
+            <div class="paragraph__separator">
+                <p>
+                    Templates are used to define what data should be displayed on what kind of paperwork. When LuxScribe creates the paperwork,
+                    it reads through the template and inserts data based on what it finds.
+                </p>
+                <p>
+                    The columns to use are put into the template as the table header. The order of those columns is also controlled by the order
+                    in which they appear on the template. 
+                </p>
+                <p>
+                    When building, LuxScribe will grab the name of each column, and retrieve the appropriate
+                    data for each row. Once all pages have been built, it renames the columns to the user set names.
+                </p>
+                <p>
+                    It also counts the pages being built as it goes, and renumbers the page count appropriately.
+                </p>
+                <p>
+                    The actual look of the paperwork is controlled by a CSS file. This approach, whilst not as easy to use as a drag and drop
+                    builder, offers the same virtually unlimited customization options, but is way easier to code.
+                </p>
+            </div>
+        </div>
+
+        <div class="blog__margin"></div>
+
+        <div class="blog__paragraph left">
+            <div class="blog__image__holder">
+                <a data-lightbox="paperwork" href="../assets/blogPosts/paperworkGen/blogImages/paperworkUI.png">
+                    <img class=image src="../assets/blogPosts/paperworkGen/blogImages/paperworkUI.png" alt="Paperwork UI"></a>
+                <h4>The Paperwork Preview UI</h4>
+            </div>
+            <div class="paragraph__separator">
+            <p>
+                Here you can see what the Fixture Report looks like within LuxScribe. The title, revision and date are all set within a menu and are
+                applied to each report.
+            </p>
+            <p>
+                From this view you can also control which column is used to sort the data. This column is then also displayed on the paperwork.
+            </p>
+
+            <p>
+                One feature I'm really excited by is the gel approximation. I've created custom XML lookup files for Lee, Rosco and Gam gel filters.
+                Each file contains every gel made by each manufacturer, its id, name, approximate color value and the description of its use case
+                as given by the manufacturer. When LuxScribe detects that its working with color data, it takes the gel name, finds the approximate
+                color value, and inserts that into the paperwork along with the gel name. It doesn't render that nicely within the preview, but it 
+                looks fantastic on the final export.
+            </p>
+            </div>
+        </div>
+
+        <div class="blog__paragraph">
+            <p>
+                A prominent bug which can be seen here is font handling. Currently, the font is defined within the CSS file. Due to the way the 
+                library I'm using to preview the file works, the text is not always rendered correctly, this is most obvious with italic text. 
+            </p>
+
+            <p>
+               Fortunately, the exported file works correctly, and all fonts appear as they should. Eventually, I plan to allow the changing of
+               the font within the application itself.
+            </p>
+
+        </div>
+
+
+        <div class="blog__margin"></div>
+
+
+        <div class="blog__paragraph right">
+            <div class="blog__image__holder">
+                <a data-lightbox="paperworkExport" href="../assets/blogPosts/paperworkGen/blogImages/page1.png">
+                    <img class=image src="../assets/blogPosts/paperworkGen/blogImages/page1.png" alt="Exported Page"></a>
+
+                <a data-lightbox="paperworkExport" href="../assets/blogPosts/paperworkGen/blogImages/page2.png"></a>
+
+                <h4>The Final Exported Pages</h4>
+            </div>
+            <div class="paragraph__separator">
+            <p>
+                This is that same page but exported to a printable file, you can see the italic text now looks correct, and all of the font weights
+                are slightly different to the preview.
+            </p>
+
+            <p>
+                If you click on the image, you can also see what every page past the first is built to look like.
+            </p>
+
+            <p>
+                Currently, the layout of the smaller title card on every page beyond the first is controlled by a combination of CSS and the builder code itself.
+                The visual layout is controlled by CSS, like everything else, but the actual data is being inserted regardless of what the template says, as it currently,
+                doesn't support a template for what everything beyond the first page should look like. This is being worked on.
+            </p>
+
+            <p>
+                A future planned feature is to support footer data in a similar fashion.
+            </p>
+            </div>
+        </div>
+
+
+        <div class="blog__margin"></div>
+
+        <h4 class="blog__paragraph__subheading centre">What next?</h4>
+        
+        <div class="blog__paragraph centre">
+            <div class="paragraph__separator">
+            <p>
+                I plan to keep working on LuxScribe in my free time, both to fix bugs and continue introducing new features.
+            </p>
+            </div>
+        </div>
+
+        <div class="blog__paragraph left">
+            <div class="paragraph__separator">
+            <p>
+                <b>Feature Wishlist:</b> <br>
+                - OSC Console link to EOS with ability to patch and channel check <br>
+                - Proper handling of accessories (This is a whole thing don't get me started)<br>
+                - Color Cut sizes paperwork <br>
+                - Fixture Quantity View <br>
+                - Light Labels <br>
+                - Option to have some level of connection to Capture instead of Vectorworks <br>
+                - Drag and drop paperwork / label template creator (The last thing I'll ever do)
+            </p>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+
+    <!--Footer-->
+    <div id="footer-placeholder"></div>
+    <script>
+        $(function(){
+          $("#footer-placeholder").load("../../pages/common/footer.html");
+        });
+        </script>
+
+    <!--End of Footer-->
+
+    </div>
+
+    <script src="../lightbox/lightbox.js"></script>
+</body>
+</html>

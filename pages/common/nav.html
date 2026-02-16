@@ -8,9 +8,11 @@
         <ul class="navbar__menu" data-visible="false">
             <li class="navbar__item"> <a href="../index.html" class="navbar__links" id="index-page">Home</a> </li>
             <li class="navbar__item"> <a href="../portfolio.html" class="navbar__links" id="portfolio-page">Portfolio</a> </li>
+            <li class="navbar__item"> <a href="../blog.html" class="navbar__links" id="blog-page">Blog</a> </li>
+            <!-- <li class="navbar__item"> <button class="ui__mode" mode="light"></button> </li> -->
         </ul>
 
-        <a href="../index.html" class="navbar__title">JACK SHORTER LIGHTING DESIGN</a>
+        <a href="../index.html" class="navbar__title">Jack Shorter Lighting Design</a>
         <a href="../index.html" class="navbar__title__short">JS-LD</a>
 
     </div>
@@ -26,11 +28,39 @@ navToggle.addEventListener('click', () => {
     const visibility = nav.getAttribute('data-visible')
 
     if (visibility === "false") {
-        nav.setAttribute("data-visible", true)
-        navToggle.setAttribute("expanded", true)
+        nav.setAttribute("data-visible", true);
+        navToggle.setAttribute("expanded", true);
     } else {
-        nav.setAttribute("data-visible", false)
-        navToggle.setAttribute("expanded", false)
+        nav.setAttribute("data-visible", false);
+        navToggle.setAttribute("expanded", false);
     }
-})
+});
+
+
+
+// const modeButton = document.querySelector('.ui__mode');
+
+// modeButton.addEventListener('click', () => {
+//     console.log("pressed button");
+    
+//     const mode = modeButton.getAttribute("mode");
+//     const root = document.documentElement;
+
+//     if (mode === "light") {
+//         modeButton.setAttribute("mode", "dark");
+
+//         root.style.setProperty("--primaryBG", "#161616");
+//         root.style.setProperty("--secondaryBG", "#202020");
+//         root.style.setProperty("--fontColor", "white");
+
+//     } else {
+//         modeButton.setAttribute("mode", "light");
+
+//         root.style.setProperty("--primaryBG", "#ededed");
+//         root.style.setProperty("--secondaryBG", "#f9f9f9");
+//         root.style.setProperty("--fontColor", "black");
+//     }
+// })
+
+
 </script>
