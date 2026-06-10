@@ -3,7 +3,6 @@
     --blue: #063853;
     --lightBlue: #1683be;
     --darkBlue: #126490;
-    --mediumBLue: rgb(15, 90, 130); 
 
     --orange: #ff8c00;
     --darkOrange: #bc5e00;
@@ -11,18 +10,14 @@
     
     --primaryBG:#ededed;
     --secondaryBG:#f9f9f9; 
-    --tertiaryBG:#f5f5f5; 
 
     --fontColor: black;
+    --secondaryFontColor: rgb(49, 49, 49);;
 
 
     --maxWidth:1720px;
     --width:80%;
 
-    --highlightColor: #063853b8;
-
-    --headingColor: white;
-    --subHeadingColor: white;
     --textHover: rgb(149, 149, 149);
 
     --headingSize: x-large;
@@ -34,8 +29,39 @@
     --paragraphFont: "Montserrat";
 
     --translucentBG: rgba(19, 19, 19, 0.8);
-    --translucentBGLight: rgba(1, 1, 1, 0.8);
 }
+
+@media (prefers-color-scheme: dark) {
+
+    :root {
+        --primaryBG:#131313;
+        --secondaryBG:#252525; 
+
+        --fontColor: #e0e0e0;
+        --secondaryFontColor: rgb(182, 182, 182);
+
+
+        --orange: #e66f00;
+        --darkOrange: #ad4e00;
+
+        --lightBlue: #126ea0;
+
+
+    }
+
+
+    
+}
+
+
+
+
+
+
+
+
+
+
 
 html {
     background-color: var(--primaryBG);
@@ -123,7 +149,7 @@ h6 {
 
     background-color: var(--secondaryBG);
     border-radius: 30px;
-    padding: 20px;
+    padding: 17px;
 }
 
 .nav__spacer {
@@ -150,11 +176,13 @@ h6 {
     text-transform: uppercase;
 
     height: auto;
-    width: auto;
+    width: fit-content;
     transition: all 0.1s ease;
 
     grid-column: 1 / span 2;
     grid-row: 1;
+
+    padding: 5px 10px;
 }
 
 .navbar__title:hover {
@@ -370,7 +398,7 @@ h6 {
 
     color: var(--lightBlue);
 
-    text-shadow: 2px 0px orange;
+    text-shadow: 2px 0px var(--orange);
 
     font-family: var(--headingFont);
 
@@ -382,7 +410,7 @@ h6 {
     font-weight: lighter;
     font-style: italic;
 
-    color: orange;
+    color: var(--orange);
 
     font-size: clamp(1.25rem, 1.0294rem + 0.8824vw, 1.625rem);
 }
@@ -512,7 +540,7 @@ h6 {
     font-family: var(--subheadingFont);
     font-weight: 500;
 
-    color: rgb(49, 49, 49);
+    color: var(--secondaryFontColor)
 }
 
 
@@ -1317,7 +1345,7 @@ h6 {
         width: 100%;
     }
     .about__jack__description h2 {
-        text-shadow: 2px 0px orange;
+        text-shadow: 2px 0px var(--orange);
 
     }
 
