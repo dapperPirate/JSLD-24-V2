@@ -11,6 +11,8 @@
     --primaryBG:#ededed;
     --secondaryBG:#f9f9f9; 
 
+    --blurredBG: rgba(255, 140, 0, 0.6);
+
     --fontColor: black;
     --secondaryFontColor: rgb(49, 49, 49);;
 
@@ -36,6 +38,8 @@
     :root {
         --primaryBG:#131313;
         --secondaryBG:#252525; 
+
+        --blurredBG: rgba(196, 88, 0, 0.6);
 
         --fontColor: #e0e0e0;
         --secondaryFontColor: rgb(182, 182, 182);
@@ -481,6 +485,27 @@ h6 {
     color: var(--blue);
     transition: all 0.3s ease;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* Project Page ############################################################################################################################## */
@@ -1259,7 +1284,8 @@ h6 {
 
         flex-direction: column;
         display: flex;
-        background: rgba(247, 140, 0, 0.603);
+        /* background: rgba(247, 140, 0, 0.603); */
+        background: var(--blurredBG);
         backdrop-filter: blur(0.6rem);
         padding-top: 4em;
         z-index: 9000;
@@ -1439,6 +1465,12 @@ h6 {
     .blog__paragraph {
         max-width: 100%;
         width: 100%;
+    }
+
+    .blog__paragraph.centre{
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
     }
 
     .blog__paragraph.left {
