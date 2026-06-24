@@ -58,7 +58,7 @@
                 </p>
 
                 <p class="blog__side__published__p">
-                    Published: 10/06/2026
+                    Published: 24/06/2026
                 </p>
 
 
@@ -230,17 +230,6 @@
             </div>
 
         </div>
-
-        <div class="blog__paragraph centre">
-
-            <div class="blog__image__holder">
-                <a data-lightbox="companionTCP" href="../assets/blogPosts/hermesCore/blogImages/javaApp.png">
-                    <img class=image src="../assets/blogPosts/hermesCore/blogImages/javaApp.png" alt="Java App"></a>
-                <h4>The Java Application</h4>
-            </div>
-
-        </div>
-
         
         <div class="blog__margin"></div>
         <h3 class="blog__paragraph__subheading sub" id="sub_6">⁃ Hardware</h3>
@@ -255,12 +244,12 @@
             </div>
 
             <p>
-                The custom hardware is pretty simple, its two rp2040s, acting as a Serial to USB Keypress converter. 
+                The custom hardware is pretty simple, it's two rp2040s, acting as a Serial to USB Keypress converter. 
                 The first rp2040 receives characters from the pc and sends that information straight to the second 2040 via UART. The second 2040 then types whatever was sent to it.
                 <br><br>
-                I’m using an old intel nuc mini pc to run Companion and the Java application. I specifically chose a nuc that has internal usb headers. 
-                This means I can embed my custom hardware directly inside the nuc. I’ve soldered together a custom 4 pin “Picoblade” connector to a usb c to 
-                connect the rp2040 to the pc motherboard.
+                I’m using an old intel nuc mini pc to run Companion and the Java application. 
+                I specifically chose a nuc that has internal usb headers. This means I can embed my custom hardware directly inside the nuc. 
+                I’ve soldered together a custom USB C cable to connect from the internal header to the rp2040 pcb.
                 <br><br>
                 When you power on the nuc, everything configures itself to get up and running in less than a minute.
             </p>
@@ -284,6 +273,10 @@
                 <br><br>
                 I’ve made custom button images in photoshop to display the Macro name and its number, but there's also no reason you couldn’t use the built in text functions to display the same information.
                 <br><br>
+                The java application also has a web UI, available on port 8001. It shows a terminal style view with logs of what it's doing. 
+                You can also see information like the selected TCP and Com Ports, along with the delay in milliseconds between keypresses.
+
+                <br><br>
                 And that's it! Press the button, and the macro is typed into EOS.
             </p>
 
@@ -297,6 +290,14 @@
                     <img class=image src="../assets/blogPosts/hermesCore/blogImages/ipButton.png" alt="Button displaying PC IP address"></a>
                 <h4>The Admin page</h4>
             </div>
+
+
+            <div class="blog__image__holder">
+                <a data-lightbox="button" href="../assets/blogPosts/hermesCore/blogImages/javaAppWeb.png">
+                    <img class=image src="../assets/blogPosts/hermesCore/blogImages/javaAppWeb.png" alt="Java App"></a>
+                <h4>An early build of the java Web UI</h4>
+            </div>
+
 
         </div>
 
