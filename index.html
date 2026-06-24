@@ -78,40 +78,58 @@
         <div class="recent__work__container" id="recent__work__container">
 
 
-        <div class="recent__work__container__text">
-            <h2>FEATURED WORK</h2>
-            <a href="portfolio.html" id="portfolio__button">see all work</a>
+            <div class="recent__work__container__text">
+                <h2>FEATURED WORK</h2>
+                <a href="portfolio.html" id="portfolio__button">see all work</a>
+            </div>
+
+            <div class="work__holders">
+                <div id="project__thumbnail__1"></div>
+                <div id="project__thumbnail__2"></div>
+                <div id="project__thumbnail__3"></div>
+            </div>
+
         </div>
 
-        <div class="work__holders">
-            <div id="project__thumbnail__1"></div>
-            <div id="project__thumbnail__2"></div>
-            <div id="project__thumbnail__3"></div>
+            <div class="about__jack__description">
+                <h2>JACK SHORTER</h2>
+                <h3>Lighting Programmer & Designer</h2>
+                <p>
+                    Jack Shorter is a Lighting Programmer & Designer based in South East England. His work is primarily focused within the 
+                    theatrical world, but is always looking for opportunities to work outside of traditional boundaries. He particularly enjoys
+                    working in unconventional environments.
+                    <br><br>
+
+                    Jack's body of work ranges from musicals performed in regional venues to intimate black box productions and plays 
+                    performed in retrofit barns in the Hampshire countryside.
+                    <br><br>
+
+                    His blog contains articles about things that personally interest him, and are at least somewhat vaguely related 
+                    to theatre.
+                    <br><br>
+                    
+                    jack@jackshorterlightingdesign.co.uk<b> / Email</b>
+                    <br>
+                    jack.shorter.lx<b> / Instagram</b>
+                </p>
         </div>
 
-        </div>
-                <div class="about__jack__description">
-                    <h2>JACK SHORTER</h2>
-                    <h3>Lighting Programmer & Designer</h2>
-                    <p>
-                        Jack Shorter is a Lighting Programmer & Designer based in South East England. His work is primarily focused within the 
-                        theatrical world, but is always looking for opportunities to work outside of traditional boundaries. He particularly enjoys
-                        working in unconventional environments.
-                        <br><br>
 
-                        Jack's body of work ranges from musicals performed in regional venues to intimate black box productions and plays 
-                        performed in retrofit barns in the Hampshire countryside.
-                        <br><br>
+        <!-- <div class="featured__blog__container">
 
-                        His blog contains articles about things that personally interest him, and are at least somewhat vaguely related 
-                        to theatre.
-                        <br><br>
-                        
-                        jack@jackshorterlightingdesign.co.uk<b> / Email</b>
-                        <br>
-                        jack.shorter.lx<b> / Instagram</b>
-                    </p>
-        </div>
+            <div class="featured__blog__container__text">
+                <h2>FEATURED BLOG POSTS</h2>
+                <a href="blog.html" id="blog__button">see all blog posts</a>
+            </div>
+
+            <div class="work__holders">
+                <div id="blog__thumbnail__1"></div>
+            </div>
+
+
+        </div> -->
+
+
     </div>
 
     <!--Footer-->
@@ -128,9 +146,13 @@
 
     <script>
         $(function(){
-          $("#project__thumbnail__1").load("projectThumbnails/romeoAndJuliet.html");
-          $("#project__thumbnail__2").load("projectThumbnails/nativity25.html");
-          $("#project__thumbnail__3").load("projectThumbnails/oedipus24.html");
+            $("#project__thumbnail__1").load("projectThumbnails/romeoAndJuliet.html");
+            $("#project__thumbnail__2").load("projectThumbnails/nativity25.html");
+            $("#project__thumbnail__3").load("projectThumbnails/oedipus24.html");
+
+
+
+            $("#blog__thumbnail__1").load("blogThumbnails/hermesCore.html");
 
         });
 
