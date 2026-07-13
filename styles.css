@@ -11,16 +11,16 @@
     --primaryBG:#ededed;
     --secondaryBG:#f9f9f9; 
 
-    --blurredBG: rgba(255, 140, 0, 0.6);
+    --blurredBG: #ff8c0099;
 
     --fontColor: black;
-    --secondaryFontColor: rgb(49, 49, 49);;
+    --secondaryFontColor: #313131;;
 
 
     --maxWidth:1720px;
     --width:80%;
 
-    --textHover: rgb(149, 149, 149);
+    --textHover: #959595;
 
     --headingSize: x-large;
     --subheadingSize: large;
@@ -30,7 +30,7 @@
     --subheadingFont: "Montserrat";
     --paragraphFont: "Montserrat";
 
-    --translucentBG: rgba(19, 19, 19, 0.8);
+    --translucentBG: #131313cc;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -39,10 +39,10 @@
         --primaryBG:#131313;
         --secondaryBG:#252525; 
 
-        --blurredBG: rgba(196, 88, 0, 0.6);
+        --blurredBG: #c4580099;
 
         --fontColor: #e0e0e0;
-        --secondaryFontColor: rgb(182, 182, 182);
+        --secondaryFontColor: #b6b6b6;
 
 
         --orange: #e66f00;
@@ -50,21 +50,9 @@
 
         --lightBlue: #126ea0;
 
-
     }
 
-
-    
 }
-
-
-
-
-
-
-
-
-
 
 
 html {
