@@ -646,6 +646,8 @@ h6 {
 
 .inner__credits__container {
     margin: 0 auto;
+    margin-top: 1rem;
+    
     justify-items: center;
     justify-content: center;
 
@@ -655,6 +657,12 @@ h6 {
 
 
     column-gap: 2rem;
+
+}
+
+.inner__credits__container h2{
+    width: 100%;
+    margin-bottom: 1rem;
 
 }
 
@@ -686,6 +694,11 @@ h6 {
     letter-spacing: 1px;
 
     font-weight: 800;
+}
+
+#character::after {
+    content: " -";
+
 }
 
 #name {
