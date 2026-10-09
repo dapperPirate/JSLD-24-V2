@@ -16,7 +16,6 @@
     --fontColor: black;
     --secondaryFontColor: #313131;;
 
-
     --maxWidth:1720px;
     --width:80%;
 
@@ -564,24 +563,34 @@ h6 {
 .production__credits__holder {
 
     justify-content: center;
+    align-items: center;
 
     display: flex;
     margin: 0 auto;
     flex-wrap: wrap;
 
+    min-height: 100px;
 
     margin-top: 15px;
     margin-bottom: 15px;
-    gap: 1rem;
+    gap: 3rem;
 }
 
 .production__credit__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    height: fit-content;
+
     text-align: center;
-    width: 24%;
+    /* width: 24%; */
     /* padding: 0px 30px 0 30px; */
 
-    font-size: small
+    font-size: medium;
 }
+
+
 
 .production__images__container {
     margin: 0 0.5rem 0.5rem 0;
@@ -1290,10 +1299,22 @@ h6 {
     .title__container h2 {
     width: 80%;
     }
-    .production__credit__container {
-        text-align: center;
-        width: 40%;
+
+
+    .production__credits__holder {
+        gap: 2rem;
     }
+
+    #role {
+        font-size: large;
+    }
+
+    #person {
+        font-size: medium;
+    }
+
+
+
     .production__images__container {
         grid-template-columns: repeat(3, 32%);
     }
@@ -1582,6 +1603,36 @@ h6 {
         padding: 0;
     }
     
+
+
+    /* footer */
+
+    .footer__container {
+        font-size: small;
+    }
+
+
+
+    /* Name credits */
+
+    .inner__credits__container {
+        gap: 1.5rem;
+    }
+
+    .credit {
+        flex-direction: column;
+    }
+
+    #character::after {
+    content: "";
+
+    }
+
+
+    .full__credits__container h3 {
+        font-size: medium;
+    }
+
 }
 
 }
